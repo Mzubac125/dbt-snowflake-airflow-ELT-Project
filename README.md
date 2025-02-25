@@ -10,9 +10,14 @@ After setting up the Snowflake infrastructure, I configured dbt Cloud to connect
 
 ## Orchestrating the Pipeline with Airflow and Astronomer Cosmos:
 I first initialized an Astros project on my local machine
+
 <img width="552" alt="Image" src="https://github.com/user-attachments/assets/3d9d4f7b-60f7-4fe0-87d0-81b801f32d07" />
-Once the project was set up, I updated the Dockerfile to configure the environment with the necessary dependencies, and created a DAG file to define the workflow. I also modified the requirements.txt file to include any additional packages needed for the DAG's execution. Finally, when I ran astro dev start in my project, it built the local environment, installed the required dependencies, and started Airflow within a Docker container, allowing me to test and run the DAG locally before deploying it to the cloud. I then created a connection to dbt Cloud from Airflow, ensuring the proper authentication and configuration to trigger dbt Cloud jobs from within the DAG. <img width="1432" alt="Image" src="https://github.com/user-attachments/assets/303a889c-0c96-4c6b-a241-c55e4974723f" />
+
+Once the project was set up, I updated the Dockerfile to configure the environment with the necessary dependencies, and created a DAG file to define the workflow. I also modified the requirements.txt file to include any additional packages needed for the DAG's execution. Finally, when I ran astro dev start in my project, it built the local environment, installed the required dependencies, and started Airflow within a Docker container, allowing me to test and run the DAG locally before deploying it to the cloud. I then created a connection to dbt Cloud from Airflow, ensuring the proper authentication and configuration to trigger dbt Cloud jobs from within the DAG. 
+<img width="1432" alt="Image" src="https://github.com/user-attachments/assets/303a889c-0c96-4c6b-a241-c55e4974723f" />
+
 Once the connection was established, I triggered the DAG, which ran successfully, executing the dbt Cloud job as part of the pipeline. 
 <img width="1040" alt="Image" src="https://github.com/user-attachments/assets/2dfdea52-2468-4730-a0be-73ea649304d9" />
+
 The tables were populated in Snowflake, and the data was ready for querying, completing the automated ELT process.
 <img width="1422" alt="Image" src="https://github.com/user-attachments/assets/a84efa69-0b90-46e0-b735-925f1987ed5a" />
