@@ -24,6 +24,6 @@ Once the connection was established, I triggered the DAG, which ran successfully
 
 <img width="1040" alt="Image" src="https://github.com/user-attachments/assets/2dfdea52-2468-4730-a0be-73ea649304d9" />
 
-The tables were populated in Snowflake, and the data was ready for querying, completing the automated ELT process.
+The tables were populated in Snowflake completing the automated ELT process.
 
 <img width="1422" alt="Image" src="https://github.com/user-attachments/assets/a84efa69-0b90-46e0-b735-925f1987ed5a" />
