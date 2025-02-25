@@ -3,6 +3,7 @@
 ## Overview of Project
 This project involved building an end-to-end ELT pipeline leveraging dbt, Snowflake, and Apache Airflow to automate data transformation and orchestration. Raw data was ingested into Snowflake, where dbt was used to transform and model the data into structured tables, including dimensional models such as dim_customer. Airflow was implemented to schedule and manage the workflow.
 
+## Setting Up and Integrating Snowflake with dbt for Data Transformation
 My first task was to create the necessary infrastructure within Snowflake. This involved setting up a dedicated warehouse for compute resources, a database to house the project, and a secure role with appropriate permissions for accessing and manipulating data. 
 
 <img width="1223" alt="Image" src="https://github.com/user-attachments/assets/05c74e28-2fc4-424d-81b2-b4e322f3d790" />
