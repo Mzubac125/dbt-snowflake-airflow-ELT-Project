@@ -1,0 +1,7 @@
+models:
+  - name: dimcustomer
+    columns:
+      - name: subscription_id
+        tests:
+          - unique
+          - not_null

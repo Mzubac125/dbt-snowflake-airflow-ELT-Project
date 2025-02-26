@@ -1,0 +1,25 @@
+version: 2
+
+sources:
+  - name: hellofresh
+    database: pc_dbt_db
+    schema: dbt_mzubac
+    tables:
+      - name: boxes
+        columns:
+          - name: box_id
+            tests:
+              - unique
+              - not_null
+              
+      - name: pauses
+        columns:
+          - name: subscription_id
+            tests:
+              - not_null
+      - name: cancels
+        columns:
+          - name: event_type
+            tests:
+              - accepted_values:
+                  values: ['cancellation','reactivation']
