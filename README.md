@@ -27,4 +27,4 @@ Once the connection was established, I triggered the DAG, which ran successfully
 
 The tables were populated in Snowflake completing the automated ELT process.
 
-<img width="1422" alt="Image" src="https://github.com/user-attachments/assets/a84efa69-0b90-46e0-b735-925f1987ed5a" />
+![Image](https://github.com/user-attachments/assets/cadf25bf-4be3-40bd-b479-c812e3188f9a)
