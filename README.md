@@ -12,6 +12,10 @@ Within the database, I created a schema to logically organize my transformed tab
 
 After setting up the Snowflake infrastructure, I configured dbt Cloud to connect to Snowflake by setting up a new dbt project and defining the connection details. Once the connection was established, I created dbt models to transform raw data, with staging models handling cleaning, while transformation models applied business logic to generate fact and dimension tables. Additionally, I created a dbt macro to convert the started_week column from YYYY-Www format (ex. 2016-W52) into an actual date format, ensuring easier analysis. To maintain data quality and consistency, I implemented dbt tests, including built-in tests for uniqueness and not-null constraints, as well as custom tests to validate business rules.
 
+### Type 2 SCD
+To ensure the historical tracking of changes in my data, I implemented a Type 2 Slowly Changing Dimension (SCD) using dbt snapshots. Specifically, I focused on tracking changes to the status column in my dimcustomer table, which needed to reflect different states over time (e.g., active, paused, cancelled). By using dbt’s snapshot functionality, I was able to create a new table that maintains the full history of customer status changes.
+<img width="914" alt="Image" src="https://github.com/user-attachments/assets/7472a425-19e4-4e29-a560-daa382c6ab2b" />            <img width="971" alt="Image" src="https://github.com/user-attachments/assets/23beb81f-2bc0-4149-a4c5-af243ef32995" />
+
 ## Orchestrating the Pipeline with Airflow and Astronomer Cosmos:
 I first initialized an Astros project on my local machine
 
