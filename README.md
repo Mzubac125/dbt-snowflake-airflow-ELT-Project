@@ -14,10 +14,13 @@ After setting up the Snowflake infrastructure, I configured dbt Cloud to connect
 
 ### Type 2 SCD
 To ensure the historical tracking of changes in my data, I implemented a Type 2 Slowly Changing Dimension (SCD) using dbt snapshots. Specifically, I focused on tracking changes to the status column in my dimcustomer table, which needed to reflect different states over time (e.g., active, paused, cancelled). By using dbt’s snapshot functionality, I was able to create a new table that maintains the full history of customer status changes.
-<p float="left">
+
+<div style="display: flex; justify-content: space-between;">
   <img width="914" alt="Image 1" src="https://github.com/user-attachments/assets/7472a425-19e4-4e29-a560-daa382c6ab2b" />
   <img width="971" alt="Image 2" src="https://github.com/user-attachments/assets/23beb81f-2bc0-4149-a4c5-af243ef32995" />
-</p>
+</div>
+
+
 ## Orchestrating the Pipeline with Airflow and Astronomer Cosmos:
 I first initialized an Astros project on my local machine
 
