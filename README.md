@@ -1,4 +1,9 @@
 # dbt-snowflake-airflow-ELT-Project
+## Table of Contents
+- [Overview of Project](#Overview-of-Project)
+- [Setting Up and Integrating Snowflake with dbt for Data Transformation](#Setting-Up-and-Integrating-Snowflake-with-dbt-for-Data-Transformation)
+- [Type 2 SCD](#Type-2-SCD)
+- [Orchestrating the Pipeline with Airflow and Astronomer Cosmos](#Orchestrating-the-Pipeline-with-Airflow-and-Astronomer-Cosmos)
 
 ## Overview of Project
 This project involved building an end-to-end ELT pipeline leveraging dbt, Snowflake, and Apache Airflow to automate data transformation and orchestration. Raw data similar to what could be found at HelloFresh, was ingested into Snowflake, where dbt was used to transform and model the data into structured tables, including dimensional models such as dim_customer. Airflow was implemented to schedule and manage the workflow.
@@ -18,7 +23,7 @@ To ensure the historical tracking of changes in my data, I implemented a Type 2 
 <img width="906" alt="Image" src="https://github.com/user-attachments/assets/b0d225ae-7dfa-43ea-8bf4-67e674497e1d" />  <img width="971" alt="Image" src="https://github.com/user-attachments/assets/265732d9-4c4c-4504-b5b5-d6fff015b2a2" />
 
 
-## Orchestrating the Pipeline with Airflow and Astronomer Cosmos:
+## Orchestrating the Pipeline with Airflow and Astronomer Cosmos
 I first initialized an Astros project on my local machine
 
 <img width="552" alt="Image" src="https://github.com/user-attachments/assets/3d9d4f7b-60f7-4fe0-87d0-81b801f32d07" />
