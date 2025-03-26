@@ -3,7 +3,6 @@ from datetime import datetime
 from airflow.models import DAG
 from airflow.providers.dbt.cloud.operators.dbt import DbtCloudRunJobOperator
 
-### Update these ids to match your account ###
 DBT_CLOUD_CONN_ID = "dbt_cloud"
 ACCOUNT_ID = "70471823430529"
 JOB_ID = "70471823429088"
